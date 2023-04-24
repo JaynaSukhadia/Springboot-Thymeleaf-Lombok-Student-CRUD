@@ -14,7 +14,7 @@
     <div class="container my-3">
 
     <h1>Student List</h1>
-    <a href="/new"><button class="btn btn-sm btn-info my-3"> Add New Student</button></a>
+    <a href="/student/new"><button class="btn btn-sm btn-info my-3"> Add New Student</button></a>
     <table class="table table-bordered table-hower table-striped">
         <thead>
             <tr>
@@ -23,6 +23,7 @@
                 <th>CITY</th>
                 <th>PHONE</th>
                 <th>AGE</th>
+                <th>COURSE</th>
                 <th>ACTION</th>
                 
             </tr>
@@ -37,9 +38,10 @@
                     <td th:text="${student.city}"></td>
                     <td th:text="${student.phone}"></td>
                      <td th:text="${student.age}"></td>
+                     <td th:text="${student.course.name}"></td>
                     
-                    <td><a th:href="@{/edit/{id}(id=${student.id})}"><button class="btn btn-sm btn-success">Update</button></a>
-                    <a th:href="@{/delete/{id}(id=${student.id})}"><button class="btn btn-sm btn-danger">Delete</button></a></td>
+                    <td><a th:href="@{/student/edit/{id}(id=${student.id})}"><button class="btn btn-sm btn-success">Update</button></a>
+                    <a th:href="@{/student/delete/{id}(id=${student.id})}"><button class="btn btn-sm btn-danger">Delete</button></a></td>
                 </tr>
             </tbody>
             

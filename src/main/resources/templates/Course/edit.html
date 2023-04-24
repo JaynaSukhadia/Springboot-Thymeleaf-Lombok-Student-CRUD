@@ -8,36 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Student Entry</title>
+    <title>Course Edit</title>
   </head>
   <body>
     <div class="container my-3">
 
-    <h1>Student Entry</h1>
+    <h1>Course Edit</h1>
 
 
 
-    <form  th:action="@{/update(id=${student.id})}"  th:object="${student}" method="post">
+    <form  th:action="@{/course/update(id=${course.id})}"  th:object="${course}" method="post">
         
         <div class="form-group">
-          <label for="name">Student Name</label>
+          <label for="name">Course Name</label>
           <input type="text" th:field="*{name}" class="form-control" id="name"  placeholder="Enter  Name">
         </div>
         
-        <div class="form-group">
-          <label for="city">City</label>
-          <input type="text" th:field="*{city}" class="form-control" id="city"  placeholder="Enter  City">
-        </div>
-        
-        <div class="form-group">
-          <label for="phone">Phone No</label>
-          <input type="text" th:field="*{phone}" class="form-control" id="phone"  placeholder="Enter  Phone">
-        </div>
-        
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input type="text" th:field="*{age}" class="form-control" id="age"  placeholder="Enter  Age">
-        </div>
         
        
         
